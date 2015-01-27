@@ -1,4 +1,5 @@
 ﻿using CodedUI_Calculator.BasicClasses;
+using CodedUI_Calculator.ScientificClasses;
 
 namespace CodedUI_Calculator.SharedClasses
 {
@@ -22,6 +23,12 @@ namespace CodedUI_Calculator.SharedClasses
         {
             SwitchToBasic();
             return new Basic();
+        }
+
+        public Scientific Scientific()
+        {
+            SwitchToScien();
+            return new Scientific();
         }
 
         public string Result

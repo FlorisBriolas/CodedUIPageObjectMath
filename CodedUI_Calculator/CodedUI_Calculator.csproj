@@ -58,8 +58,14 @@
     <Compile Include="Basic.Designer.cs">
       <DependentUpon>Basic.uitest</DependentUpon>
     </Compile>
-    <Compile Include="CodedUITest1.cs" />
+    <Compile Include="CodedUITests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scientific.cs">
+      <DependentUpon>Scientific.uitest</DependentUpon>
+    </Compile>
+    <Compile Include="Scientific.Designer.cs">
+      <DependentUpon>Scientific.uitest</DependentUpon>
+    </Compile>
     <Compile Include="Shared.cs">
       <DependentUpon>Shared.uitest</DependentUpon>
     </Compile>
@@ -69,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Basic.uitest" />
+    <None Include="Scientific.uitest" />
     <None Include="Shared.uitest" />
   </ItemGroup>
   <Choose>

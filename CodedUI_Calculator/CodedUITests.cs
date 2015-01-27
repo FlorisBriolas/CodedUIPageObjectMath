@@ -17,9 +17,9 @@ namespace CodedUI_Calculator
     /// Summary description for CodedUITest1
     /// </summary>
     [CodedUITest]
-    public class CodedUITest1
+    public class CodedUITests
     {
-        public CodedUITest1()
+        public CodedUITests()
         {
         }
 
@@ -50,7 +50,7 @@ namespace CodedUI_Calculator
        {
            //Act
            var result = codePage.Basic().push_4().Sqrt().
-               Minus().
+               Substract().
                push_4().
                Equals().Result;
            //Assert
@@ -63,11 +63,28 @@ namespace CodedUI_Calculator
        {
            //Act
            var result = codePage.Basic().push_4().Sqrt().
-               Minus().
+               Substract().
                push_2().
                Equals().Result;
            //Assert
            Assert.AreEqual("0", result);
+       }
+
+       [TestMethod]
+       public void Both_Basic_and_Scientific_SQRT4Min2_ExpectsSameResult()
+       {
+           //Act
+           var result1 = codePage.Basic().push_4().Sqrt().
+               Substract().
+               push_2().
+               Equals().Result;
+
+           var result2 = codePage.Scientific().push_4().Sqrt().
+               Substract().
+               push_2().
+               Equals().Result;
+           //Assert
+           Assert.AreEqual(result1, result2);
        }
 
         #region Additional test attributes

@@ -30,7 +30,7 @@ namespace CodedUI_Calculator.BasicClasses
             return this;
         }
 
-        public Basic Minus()
+        public Basic Substract()
         {
             Mouse.Click(this.UICalculatorWindow.UIItemWindow12.UISubtractButton);
             return this;
