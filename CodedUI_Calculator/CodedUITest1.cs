@@ -22,51 +22,11 @@ namespace CodedUI_Calculator
         {
         }
 
-        [TestInitialize]
-        public void Init()
-        {
-            codePage = App.Start();
-        }
-
-
-
         [TestMethod]
-        public void Multiply_100_8_Expects800()
+        public void CodedUITestMethod1()
         {
-            //Act
-            var result = codePage.Basic().push_1().push_0().push_0().
-                Multiply().
-                push_8().
-                Equals().Result;
-            //Assert
-            Assert.AreEqual("800",result);
+            // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
         }
-
-        [TestMethod]
-        public void Sqrt_4_Min_4_Expects0()
-        {
-            //Act
-            var result = codePage.Basic().push_4().Sqrt().
-                Minus().
-                push_4().
-                Equals().Result;
-            //Assert
-            Assert.AreEqual("-2", result);
-        }
-
-
-        [TestMethod]
-        public void Sqrt_4_Min_2_Expects0()
-        {
-            //Act
-            var result = codePage.Basic().push_4().Sqrt().
-                Minus().
-                push_2().
-                Equals().Result;
-            //Assert
-            Assert.AreEqual("0", result);
-        }
-
 
         #region Additional test attributes
 
@@ -104,6 +64,5 @@ namespace CodedUI_Calculator
             }
         }
         private TestContext testContextInstance;
-        private SharedClasses.Shared codePage;
     }
 }

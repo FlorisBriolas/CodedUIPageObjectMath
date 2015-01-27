@@ -51,7 +51,6 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App.cs" />
     <Compile Include="Basic.cs">
       <DependentUpon>Basic.uitest</DependentUpon>
     </Compile>

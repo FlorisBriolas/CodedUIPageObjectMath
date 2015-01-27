@@ -1,6 +1,4 @@
-﻿using CodedUI_Calculator.BasicClasses;
-
-namespace CodedUI_Calculator.SharedClasses
+﻿namespace CodedUI_Calculator.SharedClasses
 {
     using System;
     using System.Collections.Generic;
@@ -18,11 +16,5 @@ namespace CodedUI_Calculator.SharedClasses
     
     public partial class Shared
     {
-        public Basic Basic()
-        {
-            this.SwitchToBasic();
-            return new Basic();
-        }
-
     }
 }
