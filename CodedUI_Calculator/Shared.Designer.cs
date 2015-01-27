@@ -36,14 +36,14 @@ namespace CodedUI_Calculator.SharedClasses
         {
             #region Variable Declarations
             WinTitleBar uICalculatorTitleBar = this.UICalculatorWindow.UICalculatorTitleBar;
-            WinText uIItem0Text = this.UICalculatorWindow.UIItem0Window.UIItem0Text;
+            WinText uIResultText = this.UICalculatorWindow.UIResultWindow.UIResultText;
             #endregion
 
             // Click 'Calculator' title bar
             Mouse.Click(uICalculatorTitleBar, new Point(36, 9));
 
             // Type 'Alt + 1' in '0' label
-            Keyboard.SendKeys(uIItem0Text, this.SwitchToBasicParams.UIItem0TextSendKeys, ModifierKeys.Alt);
+            Keyboard.SendKeys(uIResultText, this.SwitchToBasicParams.UIResultTextSendKeys, ModifierKeys.Alt);
         }
         
         /// <summary>
@@ -53,14 +53,14 @@ namespace CodedUI_Calculator.SharedClasses
         {
             #region Variable Declarations
             WinTitleBar uICalculatorTitleBar = this.UICalculatorWindow.UICalculatorTitleBar;
-            WinText uIItem0Text = this.UICalculatorWindow.UIItem0Window.UIItem0Text;
+            WinText uIResultText = this.UICalculatorWindow.UIResultWindow.UIResultText;
             #endregion
 
             // Click 'Calculator' title bar
             Mouse.Click(uICalculatorTitleBar, new Point(54, 7));
 
             // Type 'Alt + 2' in '0' label
-            Keyboard.SendKeys(uIItem0Text, this.SwitchToScienParams.UIItem0TextSendKeys, ModifierKeys.Alt);
+            Keyboard.SendKeys(uIResultText, this.SwitchToScienParams.UIResultTextSendKeys, ModifierKeys.Alt);
         }
         
         /// <summary>
@@ -69,14 +69,14 @@ namespace CodedUI_Calculator.SharedClasses
         public void SwitchToProgrammer()
         {
             #region Variable Declarations
-            WinText uIItem0Text = this.UICalculatorWindow.UIItem0Window.UIItem0Text;
+            WinText uIResultText = this.UICalculatorWindow.UIResultWindow.UIResultText;
             WinTitleBar uICalculatorTitleBar = this.UICalculatorWindow.UICalculatorTitleBar;
             #endregion
 
             // Last mouse action was not recorded.
 
             // Type 'Alt + 3' in '0' label
-            Keyboard.SendKeys(uIItem0Text, this.SwitchToProgrammerParams.UIItem0TextSendKeys, ModifierKeys.Alt);
+            Keyboard.SendKeys(uIResultText, this.SwitchToProgrammerParams.UIResultTextSendKeys, ModifierKeys.Alt);
 
             // Click 'Calculator' title bar while pressing Alt
             Mouse.Click(uICalculatorTitleBar, MouseButtons.Left, ModifierKeys.Alt, new Point(149, 10));
@@ -89,14 +89,14 @@ namespace CodedUI_Calculator.SharedClasses
         {
             #region Variable Declarations
             WinTitleBar uICalculatorTitleBar = this.UICalculatorWindow.UICalculatorTitleBar;
-            WinText uIItem0Text = this.UICalculatorWindow.UIItem0Window.UIItem0Text;
+            WinText uIResultText = this.UICalculatorWindow.UIResultWindow.UIResultText;
             #endregion
 
             // Click 'Calculator' title bar
             Mouse.Click(uICalculatorTitleBar, new Point(151, 14));
 
             // Type 'Alt + 4' in '0' label
-            Keyboard.SendKeys(uIItem0Text, this.SwitchToStatisticsParams.UIItem0TextSendKeys, ModifierKeys.Alt);
+            Keyboard.SendKeys(uIResultText, this.SwitchToStatisticsParams.UIResultTextSendKeys, ModifierKeys.Alt);
         }
         
         #region Properties
@@ -185,7 +185,7 @@ namespace CodedUI_Calculator.SharedClasses
         /// <summary>
         /// Type 'Alt + 1' in '0' label
         /// </summary>
-        public string UIItem0TextSendKeys = "1";
+        public string UIResultTextSendKeys = "1";
         #endregion
     }
     
@@ -200,7 +200,7 @@ namespace CodedUI_Calculator.SharedClasses
         /// <summary>
         /// Type 'Alt + 2' in '0' label
         /// </summary>
-        public string UIItem0TextSendKeys = "2";
+        public string UIResultTextSendKeys = "2";
         #endregion
     }
     
@@ -215,7 +215,7 @@ namespace CodedUI_Calculator.SharedClasses
         /// <summary>
         /// Type 'Alt + 3' in '0' label
         /// </summary>
-        public string UIItem0TextSendKeys = "3";
+        public string UIResultTextSendKeys = "3";
         #endregion
     }
     
@@ -230,7 +230,7 @@ namespace CodedUI_Calculator.SharedClasses
         /// <summary>
         /// Type 'Alt + 4' in '0' label
         /// </summary>
-        public string UIItem0TextSendKeys = "4";
+        public string UIResultTextSendKeys = "4";
         #endregion
     }
     
@@ -263,15 +263,135 @@ namespace CodedUI_Calculator.SharedClasses
             }
         }
         
-        public UIItem0Window UIItem0Window
+        public UIResultWindow UIResultWindow
         {
             get
             {
-                if ((this.mUIItem0Window == null))
+                if ((this.mUIResultWindow == null))
                 {
-                    this.mUIItem0Window = new UIItem0Window(this);
+                    this.mUIResultWindow = new UIResultWindow(this);
                 }
-                return this.mUIItem0Window;
+                return this.mUIResultWindow;
+            }
+        }
+        
+        public UIItemWindow UIItemWindow
+        {
+            get
+            {
+                if ((this.mUIItemWindow == null))
+                {
+                    this.mUIItemWindow = new UIItemWindow(this);
+                }
+                return this.mUIItemWindow;
+            }
+        }
+        
+        public UIItemWindow1 UIItemWindow1
+        {
+            get
+            {
+                if ((this.mUIItemWindow1 == null))
+                {
+                    this.mUIItemWindow1 = new UIItemWindow1(this);
+                }
+                return this.mUIItemWindow1;
+            }
+        }
+        
+        public UIItemWindow2 UIItemWindow2
+        {
+            get
+            {
+                if ((this.mUIItemWindow2 == null))
+                {
+                    this.mUIItemWindow2 = new UIItemWindow2(this);
+                }
+                return this.mUIItemWindow2;
+            }
+        }
+        
+        public UIItemWindow3 UIItemWindow3
+        {
+            get
+            {
+                if ((this.mUIItemWindow3 == null))
+                {
+                    this.mUIItemWindow3 = new UIItemWindow3(this);
+                }
+                return this.mUIItemWindow3;
+            }
+        }
+        
+        public UIItemWindow4 UIItemWindow4
+        {
+            get
+            {
+                if ((this.mUIItemWindow4 == null))
+                {
+                    this.mUIItemWindow4 = new UIItemWindow4(this);
+                }
+                return this.mUIItemWindow4;
+            }
+        }
+        
+        public UIItemWindow5 UIItemWindow5
+        {
+            get
+            {
+                if ((this.mUIItemWindow5 == null))
+                {
+                    this.mUIItemWindow5 = new UIItemWindow5(this);
+                }
+                return this.mUIItemWindow5;
+            }
+        }
+        
+        public UIItemWindow6 UIItemWindow6
+        {
+            get
+            {
+                if ((this.mUIItemWindow6 == null))
+                {
+                    this.mUIItemWindow6 = new UIItemWindow6(this);
+                }
+                return this.mUIItemWindow6;
+            }
+        }
+        
+        public UIItemWindow7 UIItemWindow7
+        {
+            get
+            {
+                if ((this.mUIItemWindow7 == null))
+                {
+                    this.mUIItemWindow7 = new UIItemWindow7(this);
+                }
+                return this.mUIItemWindow7;
+            }
+        }
+        
+        public UIItemWindow8 UIItemWindow8
+        {
+            get
+            {
+                if ((this.mUIItemWindow8 == null))
+                {
+                    this.mUIItemWindow8 = new UIItemWindow8(this);
+                }
+                return this.mUIItemWindow8;
+            }
+        }
+        
+        public UIItemWindow9 UIItemWindow9
+        {
+            get
+            {
+                if ((this.mUIItemWindow9 == null))
+                {
+                    this.mUIItemWindow9 = new UIItemWindow9(this);
+                }
+                return this.mUIItemWindow9;
             }
         }
         #endregion
@@ -279,15 +399,35 @@ namespace CodedUI_Calculator.SharedClasses
         #region Fields
         private WinTitleBar mUICalculatorTitleBar;
         
-        private UIItem0Window mUIItem0Window;
+        private UIResultWindow mUIResultWindow;
+        
+        private UIItemWindow mUIItemWindow;
+        
+        private UIItemWindow1 mUIItemWindow1;
+        
+        private UIItemWindow2 mUIItemWindow2;
+        
+        private UIItemWindow3 mUIItemWindow3;
+        
+        private UIItemWindow4 mUIItemWindow4;
+        
+        private UIItemWindow5 mUIItemWindow5;
+        
+        private UIItemWindow6 mUIItemWindow6;
+        
+        private UIItemWindow7 mUIItemWindow7;
+        
+        private UIItemWindow8 mUIItemWindow8;
+        
+        private UIItemWindow9 mUIItemWindow9;
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
-    public class UIItem0Window : WinWindow
+    public class UIResultWindow : WinWindow
     {
         
-        public UIItem0Window(UITestControl searchLimitContainer) : 
+        public UIResultWindow(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
@@ -297,25 +437,385 @@ namespace CodedUI_Calculator.SharedClasses
         }
         
         #region Properties
-        public WinText UIItem0Text
+        public WinText UIResultText
         {
             get
             {
-                if ((this.mUIItem0Text == null))
+                if ((this.mUIResultText == null))
                 {
-                    this.mUIItem0Text = new WinText(this);
+                    this.mUIResultText = new WinText(this);
                     #region Search Criteria
-                    this.mUIItem0Text.SearchProperties[WinText.PropertyNames.Name] = "Result";
-                    this.mUIItem0Text.WindowTitles.Add("Calculator");
+                    this.mUIResultText.SearchProperties[WinText.PropertyNames.Name] = "Result";
+                    this.mUIResultText.WindowTitles.Add("Calculator");
                     #endregion
                 }
-                return this.mUIItem0Text;
+                return this.mUIResultText;
             }
         }
         #endregion
         
         #region Fields
-        private WinText mUIItem0Text;
+        private WinText mUIResultText;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIItemWindow : WinWindow
+    {
+        
+        public UIItemWindow(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "130";
+            this.WindowTitles.Add("Calculator");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UIItem0Button
+        {
+            get
+            {
+                if ((this.mUIItem0Button == null))
+                {
+                    this.mUIItem0Button = new WinButton(this);
+                    #region Search Criteria
+                    this.mUIItem0Button.SearchProperties[WinButton.PropertyNames.Name] = "0";
+                    this.mUIItem0Button.WindowTitles.Add("Calculator");
+                    #endregion
+                }
+                return this.mUIItem0Button;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUIItem0Button;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIItemWindow1 : WinWindow
+    {
+        
+        public UIItemWindow1(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "131";
+            this.WindowTitles.Add("Calculator");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UIItem1Button
+        {
+            get
+            {
+                if ((this.mUIItem1Button == null))
+                {
+                    this.mUIItem1Button = new WinButton(this);
+                    #region Search Criteria
+                    this.mUIItem1Button.SearchProperties[WinButton.PropertyNames.Name] = "1";
+                    this.mUIItem1Button.WindowTitles.Add("Calculator");
+                    #endregion
+                }
+                return this.mUIItem1Button;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUIItem1Button;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIItemWindow2 : WinWindow
+    {
+        
+        public UIItemWindow2(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "132";
+            this.WindowTitles.Add("Calculator");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UIItem2Button
+        {
+            get
+            {
+                if ((this.mUIItem2Button == null))
+                {
+                    this.mUIItem2Button = new WinButton(this);
+                    #region Search Criteria
+                    this.mUIItem2Button.SearchProperties[WinButton.PropertyNames.Name] = "2";
+                    this.mUIItem2Button.WindowTitles.Add("Calculator");
+                    #endregion
+                }
+                return this.mUIItem2Button;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUIItem2Button;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIItemWindow3 : WinWindow
+    {
+        
+        public UIItemWindow3(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "133";
+            this.WindowTitles.Add("Calculator");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UIItem3Button
+        {
+            get
+            {
+                if ((this.mUIItem3Button == null))
+                {
+                    this.mUIItem3Button = new WinButton(this);
+                    #region Search Criteria
+                    this.mUIItem3Button.SearchProperties[WinButton.PropertyNames.Name] = "3";
+                    this.mUIItem3Button.WindowTitles.Add("Calculator");
+                    #endregion
+                }
+                return this.mUIItem3Button;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUIItem3Button;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIItemWindow4 : WinWindow
+    {
+        
+        public UIItemWindow4(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "134";
+            this.WindowTitles.Add("Calculator");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UIItem4Button
+        {
+            get
+            {
+                if ((this.mUIItem4Button == null))
+                {
+                    this.mUIItem4Button = new WinButton(this);
+                    #region Search Criteria
+                    this.mUIItem4Button.SearchProperties[WinButton.PropertyNames.Name] = "4";
+                    this.mUIItem4Button.WindowTitles.Add("Calculator");
+                    #endregion
+                }
+                return this.mUIItem4Button;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUIItem4Button;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIItemWindow5 : WinWindow
+    {
+        
+        public UIItemWindow5(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "135";
+            this.WindowTitles.Add("Calculator");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UIItem5Button
+        {
+            get
+            {
+                if ((this.mUIItem5Button == null))
+                {
+                    this.mUIItem5Button = new WinButton(this);
+                    #region Search Criteria
+                    this.mUIItem5Button.SearchProperties[WinButton.PropertyNames.Name] = "5";
+                    this.mUIItem5Button.WindowTitles.Add("Calculator");
+                    #endregion
+                }
+                return this.mUIItem5Button;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUIItem5Button;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIItemWindow6 : WinWindow
+    {
+        
+        public UIItemWindow6(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "136";
+            this.WindowTitles.Add("Calculator");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UIItem6Button
+        {
+            get
+            {
+                if ((this.mUIItem6Button == null))
+                {
+                    this.mUIItem6Button = new WinButton(this);
+                    #region Search Criteria
+                    this.mUIItem6Button.SearchProperties[WinButton.PropertyNames.Name] = "6";
+                    this.mUIItem6Button.WindowTitles.Add("Calculator");
+                    #endregion
+                }
+                return this.mUIItem6Button;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUIItem6Button;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIItemWindow7 : WinWindow
+    {
+        
+        public UIItemWindow7(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "137";
+            this.WindowTitles.Add("Calculator");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UIItem7Button
+        {
+            get
+            {
+                if ((this.mUIItem7Button == null))
+                {
+                    this.mUIItem7Button = new WinButton(this);
+                    #region Search Criteria
+                    this.mUIItem7Button.SearchProperties[WinButton.PropertyNames.Name] = "7";
+                    this.mUIItem7Button.WindowTitles.Add("Calculator");
+                    #endregion
+                }
+                return this.mUIItem7Button;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUIItem7Button;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIItemWindow8 : WinWindow
+    {
+        
+        public UIItemWindow8(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "138";
+            this.WindowTitles.Add("Calculator");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UIItem8Button
+        {
+            get
+            {
+                if ((this.mUIItem8Button == null))
+                {
+                    this.mUIItem8Button = new WinButton(this);
+                    #region Search Criteria
+                    this.mUIItem8Button.SearchProperties[WinButton.PropertyNames.Name] = "8";
+                    this.mUIItem8Button.WindowTitles.Add("Calculator");
+                    #endregion
+                }
+                return this.mUIItem8Button;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUIItem8Button;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.31101.0")]
+    public class UIItemWindow9 : WinWindow
+    {
+        
+        public UIItemWindow9(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "139";
+            this.WindowTitles.Add("Calculator");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UIItem9Button
+        {
+            get
+            {
+                if ((this.mUIItem9Button == null))
+                {
+                    this.mUIItem9Button = new WinButton(this);
+                    #region Search Criteria
+                    this.mUIItem9Button.SearchProperties[WinButton.PropertyNames.Name] = "9";
+                    this.mUIItem9Button.WindowTitles.Add("Calculator");
+                    #endregion
+                }
+                return this.mUIItem9Button;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUIItem9Button;
         #endregion
     }
 }
